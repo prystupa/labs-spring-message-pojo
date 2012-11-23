@@ -24,9 +24,9 @@
         <property name="brokerURL" value="vm://localhost"/>
     </bean>
 
-    <jms:listener-container message-converter="messageConverter">
+    <jms:listener-container message-converter="messageConverter" concurrency="5-5">
         <jms:listener destination="request" ref="loanEligibilityCheckController" method="checkLoan"
-                      response-destination="reply"/>
+                      response-destination="reply" />
     </jms:listener-container>
 
     <bean id="publisher" class="org.springframework.jms.core.JmsTemplate">
