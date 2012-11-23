@@ -17,9 +17,6 @@ public class Main {
 
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(
                 "classpath:/META-INF/application-context-root.xml");
-        IRunner runner = ctx.getBean("runner", IRunner.class);
-        runner.run();
-
 
         System.out.println("Enter loan ID to check eligibility");
         Scanner scanner = new Scanner(System.in);

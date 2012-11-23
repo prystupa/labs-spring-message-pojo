@@ -1,5 +1,8 @@
 package com.prystupa;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created with IntelliJ IDEA.
  * User: eprystupa
@@ -8,8 +11,10 @@ package com.prystupa;
  */
 public class LoanEligibilityReporter {
 
+    private static Logger logger = LoggerFactory.getLogger(LoanEligibilityReporter.class);
+
     public void report(final LoanEligibilityResponse response) {
         final String results = response.getResponse();
-        System.out.println("Eligibility results: " + results);
+        logger.info(results);
     }
 }

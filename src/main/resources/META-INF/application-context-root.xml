@@ -17,9 +17,6 @@
         </property>
     </bean>
 
-    <bean id="bean1" class="com.prystupa.Bean1"/>
-    <bean id="runner" class="com.prystupa.Runner"/>
-
     <bean id="loanEligibilityCheckController" class="com.prystupa.LoanEligibilityCheckController"/>
     <bean id="loanEligibilityReporter" class="com.prystupa.LoanEligibilityReporter"/>
 

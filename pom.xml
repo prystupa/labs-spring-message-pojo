@@ -6,6 +6,13 @@
     <artifactId>labs-spring-message-pojo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <mvn.spring.version>3.1.1.RELEASE</mvn.spring.version>
+        <mvn.project.build.sourceEncoding>UTF-8</mvn.project.build.sourceEncoding>
+        <mvn.var1>Hello</mvn.var1>
+        <mvn.main.class>com.prystupa.Main</mvn.main.class>
+    </properties>
+
     <dependencies>
 
         <!-- ActiveMQ -->
@@ -34,11 +41,16 @@
             <version>${mvn.spring.version}</version>
         </dependency>
 
+        <!-- Logging -->
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.14</version>
-            <scope>runtime</scope>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.6</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.7</version>
         </dependency>
 
         <dependency>
@@ -70,17 +82,6 @@
         </dependency>
 
     </dependencies>
-
-    <properties>
-        <mvn.spring.version>3.1.1.RELEASE</mvn.spring.version>
-        <mvn.project.build.sourceEncoding>UTF-8</mvn.project.build.sourceEncoding>
-        <mvn.var1>Hello</mvn.var1>
-        <mvn.main.class>com.prystupa.Main</mvn.main.class>
-
-        <!-- log4j -->
-        <mvn.log4j.rootCategory>WARN</mvn.log4j.rootCategory>
-        <mvn.log4j.category.org.springframework.beans.factory>WARN</mvn.log4j.category.org.springframework.beans.factory>
-    </properties>
 
     <build>
         <resources>
